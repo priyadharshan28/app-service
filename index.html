@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Azure Animated LinkedIn site</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, hsl(194, 100%, 42%), hsl(88, 100%, 50%));
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 3rem;
+      opacity: 0;
+      transform: translateY(-30px);
+      animation: fadeInSlide 1s ease-out forwards;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      opacity: 0;
+      animation: fadeIn 2s ease-in forwards;
+      animation-delay: 0.8s;
+    }
+
+    @keyframes fadeInSlide {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+    @keyframes bounce {
+        0% { transform: scale(1); }
+        30% { transform: scale(1.1); }
+        50% { transform: scale(1); }
+        70% { transform: scale(1.1); }
+        100% { transform: scale(1); }
+    }
+    .button {
+      margin-top: 30px;
+      padding: 10px 20px;
+      background-color: white;
+      color: #02111d;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+      opacity: 0;
+      animation: fadeIn 2s ease-in forwards;
+      animation-delay: 1.0s;
+    }
+
+    .button:hover {
+      background-color: #f2f2f2;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <h1> Hello This is Priyadharshan</h1>
+  <p>You can access my LinkedIn and naukri profile by clicking the link below.</p>
+  <button class="button" onclick="window.location.href='https://www.linkedin.com/in/priyadharshan-s-543572320/'">Visit My LinkedIn</button>
+  <button class="button" onclick="window.location.href='https://www.naukri.com/mnjuser/profile?id=&altresid'">Visit My naukri</button>
+</body>
+</html>
